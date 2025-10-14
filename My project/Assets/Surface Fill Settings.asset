@@ -32,7 +32,7 @@ MonoBehaviour:
   isActive: 1
   RenderingLayer:
     serializedVersion: 0
-    m_Bits: 1
+    m_Bits: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -45,9 +45,9 @@ MonoBehaviour:
   vertexAnimation: 0
   materialType: 0
   customMaterial: {fileID: 0}
-  pattern: 3
+  pattern: 2
   primaryColor: {r: 0, g: 1, b: 0, a: 1}
-  secondaryColor: {r: 1, g: 0, b: 0, a: 1}
+  secondaryColor: {r: 1, g: 0, b: 0, a: 0}
   texture: {fileID: 0}
   channel: 0
   frequencyX: 40
