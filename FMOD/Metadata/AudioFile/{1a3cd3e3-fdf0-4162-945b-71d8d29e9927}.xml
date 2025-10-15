@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1a3cd3e3-fdf0-4162-945b-71d8d29e9927}">
+		<property name="assetPath">
+			<value>Gascan Shotgun/GascanShotgun 5-Gascan_short__shotgun_3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>14.625011337868481</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ed22b23f-3353-4116-a4e1-34a7eee27b33}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -80,7 +80,7 @@
 			<destination>{e07f3f87-15bb-4023-9414-d060bb4d35da}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fc5656f1-0263-42b0-accb-157049205b14}</destination>
+			<destination>{22f5d96d-7e3d-422e-883e-3316fbd727cd}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{26d97cfb-669d-4db1-b8e2-832a3c4ae516}" />
@@ -663,7 +663,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{b133d875-1621-443d-95fd-8874e8ed80be}">
 		<property name="volume">
-			<value>4.5</value>
+			<value>-15.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -1295,7 +1295,7 @@
 			<value>12</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{6f498f2f-3136-4eaa-9c20-e59ec5f4f60d}</destination>
@@ -1318,7 +1318,7 @@
 			<value>12</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{6f498f2f-3136-4eaa-9c20-e59ec5f4f60d}</destination>
@@ -1341,7 +1341,7 @@
 			<value>12</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>8</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{6f498f2f-3136-4eaa-9c20-e59ec5f4f60d}</destination>

@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{168da1b2-402c-45b4-96fe-b09862a2a955}">
 		<property name="name">
-			<value>Digi_Electricity</value>
+			<value>Wire Connect</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{905da9a9-ef4b-4993-b2e4-72ca2268d42e}</destination>
+			<destination>{1d32acae-71af-433d-8598-22925400691a}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{0afbd856-a93a-4bdc-9bdc-35ff891630c5}</destination>
@@ -56,7 +56,7 @@
 			<destination>{6e9c624a-c779-4524-9a27-076f4fb605c4}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fc5656f1-0263-42b0-accb-157049205b14}</destination>
+			<destination>{ebd2cdf0-8bde-4d04-aa74-867e625b6129}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{b6dbeb1d-3b1d-4333-b461-7a01a53fce6b}" />
@@ -96,6 +96,7 @@
 	<object class="MixerBusEffectChain" id="{083d4462-a39f-47bf-a677-5342b8b54223}">
 		<relationship name="effects">
 			<destination>{1ecb2e11-6c28-488e-8fa7-e1c911731eb8}</destination>
+			<destination>{a5aade74-2419-4f65-9443-115abee11510}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{dbe7b626-2ffd-45d0-ae27-08b856af83c8}" />
@@ -108,6 +109,7 @@
 	</object>
 	<object class="MixerBusFader" id="{9bec97bf-f69b-44aa-a16c-360c7bc355d3}" />
 	<object class="MixerBusFader" id="{1ecb2e11-6c28-488e-8fa7-e1c911731eb8}" />
+	<object class="ObjectSpatialiserEffect" id="{a5aade74-2419-4f65-9443-115abee11510}" />
 	<object class="SingleSound" id="{ad617ead-4d40-45de-8e25-50c418204f07}">
 		<relationship name="audioFile">
 			<destination>{64d3ac73-2b82-440e-9412-d51df3e1b93b}</destination>

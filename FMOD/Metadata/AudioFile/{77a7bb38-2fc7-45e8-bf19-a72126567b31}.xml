@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{77a7bb38-2fc7-45e8-bf19-a72126567b31}">
+		<property name="assetPath">
+			<value>Rocks&amp;Bricks Shotgun/Rocks&amp;Bricks Shotgun MIc 25-Bricks_scratch_long_3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.625011337868481</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ed22b23f-3353-4116-a4e1-34a7eee27b33}</destination>
+		</relationship>
+	</object>
+</objects>

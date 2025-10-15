@@ -5,7 +5,7 @@
 			<value>Wire_Noise</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{1d32acae-71af-433d-8598-22925400691a}</destination>
@@ -61,7 +61,7 @@
 			<destination>{eb16449e-c37e-4b04-adb3-437f30088d51}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fc5656f1-0263-42b0-accb-157049205b14}</destination>
+			<destination>{ebd2cdf0-8bde-4d04-aa74-867e625b6129}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{62475d5d-dd9f-4a64-a11e-0f10d8265f2c}" />
@@ -167,7 +167,7 @@
 	<object class="MixerBusEffectChain" id="{7dec2022-89cf-4dee-b1cb-1157c82ec757}">
 		<relationship name="effects">
 			<destination>{de70c519-b008-439d-96ed-833fd96bdfdb}</destination>
-			<destination>{5d4aede0-340a-463f-b277-c9d411f0f367}</destination>
+			<destination>{477cede4-079f-4b16-928b-d6bf507e07bb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b8d15f06-9962-45e0-a707-3cce969172d9}" />
@@ -202,7 +202,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{4b45d6cd-8aeb-4813-8bd4-75453ddabadb}" />
 	<object class="MixerBusFader" id="{de70c519-b008-439d-96ed-833fd96bdfdb}" />
-	<object class="SpatialiserEffect" id="{5d4aede0-340a-463f-b277-c9d411f0f367}" />
+	<object class="ObjectSpatialiserEffect" id="{477cede4-079f-4b16-928b-d6bf507e07bb}" />
 	<object class="SingleSound" id="{ce9806eb-0d51-4e94-9e1f-77e6d0209b62}">
 		<relationship name="audioFile">
 			<destination>{0fb9e4a6-dbd6-4ffd-96f0-b72a88f9ef1a}</destination>

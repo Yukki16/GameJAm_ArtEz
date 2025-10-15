@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using UnityEngine.SceneManagement;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
@@ -37,6 +39,10 @@ public class AudioManager : MonoBehaviour
         }
         instance = this;
 
+        DontDestroyOnLoad(this.gameObject);
+
+        SceneManager.activeSceneChanged += CleanUp;
+
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
 
@@ -45,6 +51,7 @@ public class AudioManager : MonoBehaviour
         ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
     }
+
 
     private void Start()
     {
@@ -100,6 +107,11 @@ public class AudioManager : MonoBehaviour
         emitter.EventReference = eventReference;
         eventEmitters.Add(emitter);
         return emitter;
+    }
+
+    private void CleanUp(Scene arg0, Scene arg1)
+    {
+        CleanUp();
     }
 
     private void CleanUp()

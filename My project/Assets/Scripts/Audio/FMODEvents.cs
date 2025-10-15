@@ -5,10 +5,10 @@ using FMODUnity;
 
 public class FMODEvents : MonoBehaviour
 {
-    [field: Header("Ambience")]
+    [field: Header("Game Music")]
     [field: SerializeField] public EventReference ambience { get; private set; }
 
-    [field: Header("Music")]
+    [field: Header("Menu Music")]
     [field: SerializeField] public EventReference music { get; private set; }
 
     [field: Header("Player SFX")]
