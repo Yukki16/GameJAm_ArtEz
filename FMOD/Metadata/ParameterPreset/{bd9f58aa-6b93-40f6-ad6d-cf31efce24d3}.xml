@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{bd9f58aa-6b93-40f6-ad6d-cf31efce24d3}">
+		<property name="name">
+			<value>Flap_Speed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ca9bea45-e094-4bbe-9aee-b30086c912e2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{84ff57da-d2ef-4a9e-b018-6c3d29d5d631}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{84ff57da-d2ef-4a9e-b018-6c3d29d5d631}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
