@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{6ccdb6f2-3d2f-4d54-8c13-587fc2e05610}">
+		<property name="assetPath">
+			<value>Keyboard_Click/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ed22b23f-3353-4116-a4e1-34a7eee27b33}</destination>
+		</relationship>
+	</object>
+</objects>
