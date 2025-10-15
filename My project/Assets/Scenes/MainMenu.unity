@@ -1257,6 +1257,13 @@ MonoBehaviour:
       Data3: 461186494
       Data4: 274126479
     Path: event:/Game_Sounds/Narrator_1
+  <metroDistant>k__BackingField:
+    Guid:
+      Data1: -1874515271
+      Data2: 1119315882
+      Data3: 1689021629
+      Data4: 722953590
+    Path: event:/Ambience/Metro_amb 2
 --- !u!4 &1337286126
 Transform:
   m_ObjectHideFlags: 0
