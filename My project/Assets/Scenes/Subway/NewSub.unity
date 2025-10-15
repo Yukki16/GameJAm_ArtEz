@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 111554337}
   - component: {fileID: 111554336}
   - component: {fileID: 111554335}
+  - component: {fileID: 111554339}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -228,6 +229,88 @@ Transform:
   - {fileID: 1249864476}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &111554339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111554334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 7894ad12915eb3e48b13a38a572bb7e5, type: 3}
+  m_NotificationBehavior: 3
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 490bfe20-f79c-4a70-95fa-e4dae12e18ff
+    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e666fb2-b0dd-4a60-94cc-4e438d902914
+    m_ActionName: 'Player/Look[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0225028d-7132-4fb5-a215-df21e469a754
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6cdcad76-9760-4f58-89bc-d149d98dfac5
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4fa5d877-7b10-45e4-86f5-19c79e5fd25e
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2a2f435e-e2a7-460a-8b3c-734f2ceaba96
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e9da2299-0b92-495d-9a25-0f8b31eeeb26
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a343ddda-7162-4d84-b0fd-2796f2dea13b
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4ff11606-ee64-4c5d-a5a1-1aa2627ddc21
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2de772b1-7c05-470e-9210-e342aa31d9c5
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 82817d43-f411-4e57-894a-841da23bea09
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7fc98ebc-8b5b-4430-aa71-3e7b5e8291ad
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21569f8d-b67f-4517-9518-04f946250203
+    m_ActionName: 'Player/Sonar[/Keyboard/e]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1974201137}
 --- !u!1 &187855380
 GameObject:
   m_ObjectHideFlags: 0
