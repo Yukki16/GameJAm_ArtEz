@@ -9,11 +9,15 @@ public class FlyController : MonoBehaviour
 
     [Header("Movement")]
     public float speed = 10f;
+    public float verticalSpeed = 1f;
+    float verticalM;
 
     [Header("Camera Settings")]
     public float sensitivity = 200f;
     [Range(-80f, -10f)] public float minAngle = -60f;
     [Range(10f, 80f)] public float maxAngle = 60f;
+
+
 
     private Transform cam;
     private float pitch = 0f; // vertical rotation (X axis)
@@ -50,11 +54,22 @@ public class FlyController : MonoBehaviour
         cam.localRotation = Quaternion.Euler(pitch, 0f, 0f);
     }
 
+    void OnVerticalM(InputValue verticalMValue)
+    {
+       verticalM = verticalMValue.Get<float>(); 
+    }
+
+    void OnSonar(InputValue sonarValue)
+    {
+        //It already casts so invoke here whatever you want it to happen.
+    }
+
     private void FixedUpdate()
     {
         // Move relative to the player's facing direction
-        Vector3 moveDirection = (transform.forward * movementY + transform.right * movementX).normalized;
+        Vector3 moveDirection = (transform.forward * movementY + transform.right * movementX).normalized + new Vector3(0, verticalM * verticalSpeed, 0).normalized;
 
         rb.AddForce(moveDirection * speed, ForceMode.Acceleration);
+
     }
 }

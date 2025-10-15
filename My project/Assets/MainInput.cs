@@ -118,6 +118,15 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""VerticalM"",
+                    ""type"": ""Value"",
+                    ""id"": ""fe140041-4ba4-402b-b22d-16903d835bb2"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -296,6 +305,39 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
                     ""action"": ""Sonar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""2db817fd-b470-4423-8a93-7b747e251a93"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalM"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""e2e171c8-ffed-4c20-9daa-0d199d302fbc"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalM"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""d6b57e03-d9eb-4666-93a9-6d02d14c7b20"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalM"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -884,6 +926,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Sonar = m_Player.FindAction("Sonar", throwIfNotFound: true);
+        m_Player_VerticalM = m_Player.FindAction("VerticalM", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -980,6 +1023,7 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Sonar;
+    private readonly InputAction m_Player_VerticalM;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1003,6 +1047,10 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Sonar".
         /// </summary>
         public InputAction @Sonar => m_Wrapper.m_Player_Sonar;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/VerticalM".
+        /// </summary>
+        public InputAction @VerticalM => m_Wrapper.m_Player_VerticalM;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1038,6 +1086,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @Sonar.started += instance.OnSonar;
             @Sonar.performed += instance.OnSonar;
             @Sonar.canceled += instance.OnSonar;
+            @VerticalM.started += instance.OnVerticalM;
+            @VerticalM.performed += instance.OnVerticalM;
+            @VerticalM.canceled += instance.OnVerticalM;
         }
 
         /// <summary>
@@ -1058,6 +1109,9 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
             @Sonar.started -= instance.OnSonar;
             @Sonar.performed -= instance.OnSonar;
             @Sonar.canceled -= instance.OnSonar;
+            @VerticalM.started -= instance.OnVerticalM;
+            @VerticalM.performed -= instance.OnVerticalM;
+            @VerticalM.canceled -= instance.OnVerticalM;
         }
 
         /// <summary>
@@ -1379,6 +1433,13 @@ public partial class @MainInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSonar(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "VerticalM" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnVerticalM(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
