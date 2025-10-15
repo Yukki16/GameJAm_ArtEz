@@ -26,6 +26,8 @@ public class FlyController : MonoBehaviour
     //Audio
     EventInstance flightAudio;
 
+    EventInstance metroDistant;
+
     private void Awake()
     {
         sonar = GetComponentInChildren<Pulsing>();
@@ -33,7 +35,7 @@ public class FlyController : MonoBehaviour
 
         AudioManager.instance.InitializeAmbience(FMODEvents.instance.ambience);
         AudioManager.instance.SetAmbienceLabelParameter("Level", "This");
-        AudioManager.instance.SetAmbienceParameter("Volume", 0.7f);
+        AudioManager.instance.SetAmbienceParameter("Volume", 0.3f);
 
         flightAudio = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFlight);
 

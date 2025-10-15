@@ -18,6 +18,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Narator")]
     [field: SerializeField] public EventReference narrator { get; private set; }
 
+    [field: Header("Random Ambient Noises")]
+    [field: SerializeField] public EventReference metroDistant { get; private set; }
+
     public static FMODEvents instance { get; private set; }
 
     private void Awake()

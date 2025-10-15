@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: ../FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638961657953414054
+  lastModified: 638961668316863197
   FileSizes:
   - Name: Desktop
-    Value: 15774016
+    Value: 15776352
   Exists: 1
 --- !u!114 &-8178861613452818518
 MonoBehaviour:
@@ -770,13 +770,14 @@ MonoBehaviour:
   - {fileID: -4254574951948473559}
   - {fileID: -6212770249910413981}
   - {fileID: 8193939763461430570}
+  - {fileID: 8552647491722564870}
   EditorParameters:
   - {fileID: 4519529865386380327}
   MasterBanks:
   - {fileID: -8576556519797714203}
   StringsBanks:
   - {fileID: 8153506809391692617}
-  cacheTime: 638961657953459298
+  cacheTime: 638961668316927909
   cacheVersion: 131632
 --- !u!114 &151444235071115188
 MonoBehaviour:
@@ -1196,10 +1197,10 @@ MonoBehaviour:
   Path: ../FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638961657953459298
+  lastModified: 638961668316927909
   FileSizes:
   - Name: Desktop
-    Value: 2950
+    Value: 3004
   Exists: 1
 --- !u!114 &8193939763461430570
 MonoBehaviour:
@@ -1228,6 +1229,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8552647491722564870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Metro_amb 2
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Metro_amb 2
+  Guid:
+    Data1: -1874515271
+    Data2: 1119315882
+    Data3: 1689021629
+    Data4: 722953590
+  Banks:
+  - {fileID: -8576556519797714203}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18000
 --- !u!114 &8570898281766372925
 MonoBehaviour:
   m_ObjectHideFlags: 0
