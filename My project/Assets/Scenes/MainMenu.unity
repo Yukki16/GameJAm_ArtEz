@@ -265,8 +265,8 @@ GameObject:
   m_Component:
   - component: {fileID: 361408824}
   - component: {fileID: 361408823}
-  - component: {fileID: 361408822}
   - component: {fileID: 361408825}
+  - component: {fileID: 361408826}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -274,14 +274,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &361408822
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361408821}
-  m_Enabled: 1
 --- !u!20 &361408823
 Camera:
   m_ObjectHideFlags: 0
@@ -392,6 +384,20 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &361408826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361408821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &419139468
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +453,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SettingsUI: {fileID: 0}
+  ButtonPressed:
+    Guid:
+      Data1: 556098491
+      Data2: 1160794082
+      Data3: 1996709539
+      Data4: 1793759505
+    Path: event:/UI/Accept
 --- !u!114 &419139471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,6 +1201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1337286126}
+  - component: {fileID: 1337286127}
   - component: {fileID: 1337286125}
   m_Layer: 0
   m_Name: AudioManager
@@ -1217,26 +1231,12 @@ MonoBehaviour:
     Path: 
   <music>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 654964813
+      Data2: 1096693919
+      Data3: -983030352
+      Data4: 159072613
+    Path: event:/Music/Main_Menu
   <playerFootsteps>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <coinCollected>k__BackingField:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  <coinIdle>k__BackingField:
     Guid:
       Data1: 0
       Data2: 0
@@ -1258,6 +1258,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337286127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337286124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46025e82205032d47b7b9d6bb0bdc2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+  SFXVolume: 1
 --- !u!1 &1816998060
 GameObject:
   m_ObjectHideFlags: 0

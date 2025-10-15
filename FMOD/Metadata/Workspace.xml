@@ -8,7 +8,7 @@
 			<destination>{9ca857b7-2ffb-45e3-9f0a-f6c4856f7b60}</destination>
 		</relationship>
 		<relationship name="masterEffectPresetFolder">
-			<destination>{c9e32a50-72c2-4e30-b90b-adebedb9b985}</destination>
+			<destination>{457bbd39-b000-4f2a-b899-13dc1e7b6e27}</destination>
 		</relationship>
 		<relationship name="masterParameterPresetFolder">
 			<destination>{ca9bea45-e094-4bbe-9aee-b30086c912e2}</destination>
@@ -26,7 +26,7 @@
 			<destination>{784857d9-b245-4b3a-b4d4-e53cdc760110}</destination>
 		</relationship>
 		<relationship name="profilerSessionFolder">
-			<destination>{864f82e3-96b0-4423-b04b-bdcd047a81ef}</destination>
+			<destination>{9c9fccdd-0022-45c5-a3eb-79594060a9cb}</destination>
 		</relationship>
 		<relationship name="platforms">
 			<destination>{f767ca74-4db8-4888-962e-ad75ecfded62}</destination>
