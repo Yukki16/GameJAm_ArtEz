@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,10 +23,21 @@ public class FlyController : MonoBehaviour
     private Transform cam;
     private float pitch = 0f; // vertical rotation (X axis)
 
+    //Audio
+    EventInstance flightAudio;
+
     private void Awake()
     {
         sonar = GetComponentInChildren<Pulsing>();
         cam = Camera.main.transform;
+
+        AudioManager.instance.InitializeAmbience(FMODEvents.instance.ambience);
+        AudioManager.instance.SetAmbienceLabelParameter("Level", "This");
+        AudioManager.instance.SetAmbienceParameter("Volume", 0.7f);
+
+        flightAudio = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFlight);
+
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.narrator, this.transform.position);
     }
 
     private void Start()
@@ -63,6 +75,7 @@ public class FlyController : MonoBehaviour
     void OnSonar(InputValue sonarValue)
     {
         sonar.pulse();
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.sonar, this.transform.position);
         //It already casts so invoke here whatever you want it to happen.
     }
 
@@ -73,5 +86,24 @@ public class FlyController : MonoBehaviour
 
         rb.AddForce(moveDirection * speed, ForceMode.Acceleration);
 
+        UpdateSound();
+    }
+
+    private void UpdateSound()
+    {
+        if (rb.linearVelocity.magnitude > 0)
+        {
+            PLAYBACK_STATE playbackstate;
+            flightAudio.getPlaybackState(out playbackstate);
+
+            if(playbackstate.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                flightAudio.start();
+            }
+        }
+        else
+        {
+            flightAudio.stop(STOP_MODE.ALLOWFADEOUT);
+        }
     }
 }

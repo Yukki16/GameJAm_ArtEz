@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-        SceneManager.activeSceneChanged += CleanUp;
+        SceneManager.sceneUnloaded += CleanUp;
 
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
@@ -51,7 +51,6 @@ public class AudioManager : MonoBehaviour
         ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
     }
-
 
     private void Start()
     {
@@ -67,7 +66,7 @@ public class AudioManager : MonoBehaviour
         sfxBus.setVolume(SFXVolume);
     }
 
-    private void InitializeAmbience(EventReference ambienceEventReference)
+    public void InitializeAmbience(EventReference ambienceEventReference)
     {
         ambienceEventInstance = CreateInstance(ambienceEventReference);
         ambienceEventInstance.start();
@@ -77,6 +76,11 @@ public class AudioManager : MonoBehaviour
     {
         musicEventInstance = CreateInstance(musicEventReference);
         musicEventInstance.start();
+    }
+
+    public void SetAmbienceLabelParameter(string parameterName, string pName)
+    {
+        ambienceEventInstance.setParameterByNameWithLabel(parameterName, pName);
     }
 
     public void SetAmbienceParameter(string parameterName, float parameterValue)
@@ -109,7 +113,8 @@ public class AudioManager : MonoBehaviour
         return emitter;
     }
 
-    private void CleanUp(Scene arg0, Scene arg1)
+
+    private void CleanUp(Scene arg0)
     {
         CleanUp();
     }

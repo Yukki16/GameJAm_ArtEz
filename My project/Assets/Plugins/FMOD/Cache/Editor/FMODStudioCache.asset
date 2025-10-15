@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: ../FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638961602141313226
+  lastModified: 638961657953414054
   FileSizes:
   - Name: Desktop
-    Value: 15773568
+    Value: 15774016
   Exists: 1
 --- !u!114 &-8178861613452818518
 MonoBehaviour:
@@ -180,6 +180,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 2113113027631256750}
+  - {fileID: -603529404327786043}
   MinDistance: 1
   MaxDistance: 20
   Length: 102750
@@ -662,6 +663,30 @@ MonoBehaviour:
   - Name: Desktop
     Value: 494
   Exists: 1
+--- !u!114 &-603529404327786043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game_Music/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3566766152
+    data2: 1321235782
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-119498383345954151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,12 +770,13 @@ MonoBehaviour:
   - {fileID: -4254574951948473559}
   - {fileID: -6212770249910413981}
   - {fileID: 8193939763461430570}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: 4519529865386380327}
   MasterBanks:
   - {fileID: -8576556519797714203}
   StringsBanks:
   - {fileID: 8153506809391692617}
-  cacheTime: 638961602141343253
+  cacheTime: 638961657953459298
   cacheVersion: 131632
 --- !u!114 &151444235071115188
 MonoBehaviour:
@@ -897,9 +923,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Game_Music/Parameter 1
+  m_Name: parameter:/Game_Music/Level
   m_EditorClassIdentifier: 
-  Name: Parameter 1
+  Name: Level
   StudioPath: 
   Min: 0
   Max: 5
@@ -912,7 +938,7 @@ MonoBehaviour:
   Labels:
   - Value A
   - Value B
-  - Value C
+  - This
   - Value D
   - Value E
   - Value F
@@ -999,6 +1025,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14608
+--- !u!114 &4519529865386380327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: parameter:/Volume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3566766152
+    data2: 1321235782
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4722262855092626365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,10 +1196,10 @@ MonoBehaviour:
   Path: ../FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638961602141343253
+  lastModified: 638961657953459298
   FileSizes:
   - Name: Desktop
-    Value: 2918
+    Value: 2950
   Exists: 1
 --- !u!114 &8193939763461430570
 MonoBehaviour:

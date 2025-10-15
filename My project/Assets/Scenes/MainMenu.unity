@@ -1224,11 +1224,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ambience>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1534946167
+      Data2: 1231915162
+      Data3: -946905469
+      Data4: -2142113527
+    Path: event:/Music/Game_Music
   <music>k__BackingField:
     Guid:
       Data1: 654964813
@@ -1236,13 +1236,27 @@ MonoBehaviour:
       Data3: -983030352
       Data4: 159072613
     Path: event:/Music/Main_Menu
-  <playerFootsteps>k__BackingField:
+  <playerFlight>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 648189497
+      Data2: 1271677880
+      Data3: 360653209
+      Data4: 1173562634
+    Path: event:/Player/Fly
+  <sonar>k__BackingField:
+    Guid:
+      Data1: -2050966572
+      Data2: 1296353713
+      Data3: 1308723620
+      Data4: -483290003
+    Path: event:/UI/Sonar
+  <narrator>k__BackingField:
+    Guid:
+      Data1: 1203353321
+      Data2: 1324588098
+      Data3: 461186494
+      Data4: 274126479
+    Path: event:/Game_Sounds/Narrator_1
 --- !u!4 &1337286126
 Transform:
   m_ObjectHideFlags: 0

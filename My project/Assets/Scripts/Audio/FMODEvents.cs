@@ -12,7 +12,11 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference music { get; private set; }
 
     [field: Header("Player SFX")]
-    [field: SerializeField] public EventReference playerFootsteps { get; private set; }
+    [field: SerializeField] public EventReference playerFlight { get; private set; }
+    [field: SerializeField] public EventReference sonar {  get; private set; }
+
+    [field: Header("Narator")]
+    [field: SerializeField] public EventReference narrator { get; private set; }
 
     public static FMODEvents instance { get; private set; }
 
