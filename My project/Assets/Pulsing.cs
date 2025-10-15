@@ -7,28 +7,28 @@ public class Pulsing : MonoBehaviour
     [SerializeField] float currentRadius;
     [SerializeField] float targetRadius;
     float lerpValue;
-    public bool testBool;
+    bool canPulse;
     private void Awake()
     {
+        canPulse = true;
         sonar = this.GetComponent<SphereCollider>();
         currentRadius = 0.5f;
     }
     public void pulse()
     {
-        testBool = false;
-        lerpValue = 0;
-        StartCoroutine(pulsed());
+        if (canPulse)
+        {
+            lerpValue = 0;
+            StartCoroutine(pulsed());
+        }
     }
     private void Update()
     {
         sonar.radius = Mathf.Lerp(currentRadius, targetRadius, lerpValue);
-        if (testBool)
-        {
-            pulse();
-        }
     }
     IEnumerator pulsed()
     {
+        canPulse = false;
         for(int i = 0; i < 101; i++)
         {
             lerpValue += 0.01f;
@@ -45,5 +45,6 @@ public class Pulsing : MonoBehaviour
         targetRadius = currentRadius;
         currentRadius = sonar.radius;
         lerpValue = 0;
+        canPulse = true;
     }
 }

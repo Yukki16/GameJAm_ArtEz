@@ -18,12 +18,13 @@ public class FlyController : MonoBehaviour
     [Range(10f, 80f)] public float maxAngle = 60f;
 
 
-
+    Pulsing sonar;
     private Transform cam;
     private float pitch = 0f; // vertical rotation (X axis)
 
     private void Awake()
     {
+        sonar = GetComponentInChildren<Pulsing>();
         cam = Camera.main.transform;
     }
 
@@ -61,6 +62,7 @@ public class FlyController : MonoBehaviour
 
     void OnSonar(InputValue sonarValue)
     {
+        sonar.pulse();
         //It already casts so invoke here whatever you want it to happen.
     }
 
